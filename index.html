@@ -1,0 +1,375 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Nabil Fannane — Front-End &amp; UI Engineer</title>
+  <meta name="description" content="Front-end & UI engineer turning ideas into fast, accessible, responsive web experiences that feel effortless on every screen.">
+  <meta name="theme-color" content="#0B0F14">
+  <meta property="og:title" content="Nabil Fannane — Front-End & UI Engineer">
+  <meta property="og:description" content="Ideas, engineered to feel effortless.">
+  <meta property="og:type" content="website">
+  <meta property="og:image" content="assets/img/og.jpg">
+  <link rel="icon" href="assets/favicon.svg" type="image/svg+xml">
+
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link rel="preconnect" href="https://cdn.jsdelivr.net" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter+Tight:wght@500;600;700;800&family=Inter:wght@400;500&family=Instrument+Serif:ital@1&family=JetBrains+Mono:wght@400;500&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="style.css">
+
+  <script>document.documentElement.classList.add('js');</script>
+  <script src="https://cdn.jsdelivr.net/npm/gsap@3.12.5/dist/gsap.min.js" defer></script>
+  <script src="https://cdn.jsdelivr.net/npm/gsap@3.12.5/dist/ScrollTrigger.min.js" defer></script>
+  <script src="https://cdn.jsdelivr.net/npm/lenis@1.1.13/dist/lenis.min.js" defer></script>
+  <script src="script.js" defer></script>
+
+  <script type="application/ld+json">
+  {"@context":"https://schema.org","@type":"Person","name":"Nabil Fannane","jobTitle":"Front-End & UI Engineer","sameAs":["https://github.com/mzabicoder"]}
+  </script>
+</head>
+<body>
+  <a class="skip-link" href="#main">Skip to content</a>
+
+  <!-- Preloader -->
+  <div class="preloader" aria-hidden="true">
+    <div class="preloader__inner">
+      <span class="preloader__name mono">Nabil Fannane — Portfolio</span>
+      <span class="preloader__count"><span data-preload-count>000</span></span>
+      <span class="preloader__bar"><span data-preload-bar></span></span>
+    </div>
+  </div>
+
+  <div class="grain" aria-hidden="true"></div>
+  <div class="progress" aria-hidden="true"><span></span></div>
+  <div class="cursor" aria-hidden="true"><span class="cursor__dot"></span><span class="cursor__ring"><span class="cursor__label"></span></span></div>
+
+  <!-- Nav -->
+  <header class="nav" data-nav>
+    <a class="nav__logo" href="#top" aria-label="Nabil Fannane, back to top">
+      <span class="nav__mark">NF</span><span class="nav__name">Nabil Fannane</span>
+    </a>
+    <nav class="nav__links" aria-label="Primary">
+      <a href="#work" class="link-draw">Work</a>
+      <a href="#about" class="link-draw">About</a>
+      <a href="#services" class="link-draw">Services</a>
+      <a href="#contact" class="link-draw">Contact</a>
+    </nav>
+    <span class="nav__status mono"><span class="pulse"></span>Available</span>
+    <button class="nav__toggle" aria-expanded="false" aria-controls="menu" data-menu-toggle>
+      <span class="sr-only">Menu</span><span></span><span></span>
+    </button>
+  </header>
+
+  <div class="menu" id="menu" data-menu hidden>
+    <nav aria-label="Mobile">
+      <a href="#work">Work</a>
+      <a href="#about">About</a>
+      <a href="#services">Services</a>
+      <a href="#contact">Contact</a>
+    </nav>
+  </div>
+
+  <main id="main">
+
+    <!-- 01 HERO — film scene 1 -->
+    <section class="hero film" id="top" data-film="0,0.34" aria-labelledby="hero-title">
+      <div class="film__sticky">
+        <canvas class="film__canvas" aria-hidden="true"></canvas>
+        <div class="film__vignette"></div>
+        <p class="sr-only">Background film: a developer writes HTML and CSS at a night-lit workstation as the camera pushes in toward the screen.</p>
+
+        <div class="hero__content">
+          <p class="eyebrow mono" data-hero-eyebrow>Front-end &amp; UI engineer <span class="dash"></span> Available for projects</p>
+          <h1 class="hero__title" id="hero-title" aria-label="Ideas, engineered to feel effortless.">
+            <span class="line"><span class="line__inner" data-split="chars">Ideas,</span></span>
+            <span class="line"><span class="line__inner" data-split="chars">engineered</span></span>
+            <span class="line"><span class="line__inner serif grad" data-split="chars">to feel effortless.</span></span>
+          </h1>
+          <div class="hero__foot">
+            <p class="hero__sub" data-hero-fade>Fast, accessible, responsive interfaces that people enjoy using and that businesses can scale.</p>
+            <div class="hero__ctas" data-hero-fade>
+              <a class="btn btn--primary" href="#contact" data-magnetic><span>Start a project</span><i aria-hidden="true">→</i></a>
+              <a class="btn btn--ghost" href="#work" data-magnetic><span>See the work</span></a>
+            </div>
+          </div>
+        </div>
+
+        <div class="scroll-cue mono" aria-hidden="true"><span class="scroll-cue__line"></span>Scroll</div>
+      </div>
+    </section>
+
+    <!-- 02 STATS -->
+    <section class="stats" aria-label="Standards I build to">
+      <div class="stats__grid wrap">
+        <div class="stat" data-reveal>
+          <span class="stat__num" data-count="100">0</span>
+          <span class="stat__label mono">Lighthouse target across performance, a11y, best practices &amp; SEO</span>
+        </div>
+        <div class="stat" data-reveal>
+          <span class="stat__num" data-scramble="&lt;1s">&lt;1s</span>
+          <span class="stat__label mono">Largest Contentful Paint budget on every build</span>
+        </div>
+        <div class="stat" data-reveal>
+          <span class="stat__num" data-scramble="AA">AA</span>
+          <span class="stat__label mono">WCAG 2.2 accessibility as the baseline, never an afterthought</span>
+        </div>
+        <div class="stat" data-reveal>
+          <span class="stat__num" data-count="1">0</span>
+          <span class="stat__label mono">Codebase that adapts to every screen, from 320px up to 4K</span>
+        </div>
+      </div>
+      <div class="marquee" aria-hidden="true">
+        <div class="marquee__track">
+          <span>HTML</span><span>CSS</span><span>JavaScript</span><span>TypeScript</span><span>React</span><span>GSAP</span><span>Design Systems</span><span>Accessibility</span><span>Performance</span><span>Responsive</span>
+          <span>HTML</span><span>CSS</span><span>JavaScript</span><span>TypeScript</span><span>React</span><span>GSAP</span><span>Design Systems</span><span>Accessibility</span><span>Performance</span><span>Responsive</span>
+        </div>
+      </div>
+    </section>
+
+    <!-- 03 MISSION -->
+    <section class="mission" aria-labelledby="mission-label">
+      <div class="wrap">
+        <p class="eyebrow mono" id="mission-label" data-reveal>(01) — Mission</p>
+        <p class="mission__text" data-mission>
+          The web should work beautifully for <em>everyone,</em> on <em>every device,</em> on every connection. I build the interfaces that make that <em>true.</em>
+        </p>
+      </div>
+    </section>
+
+    <!-- 04 PILLARS -->
+    <section class="pillars" aria-labelledby="pillars-title" data-pillars>
+      <div class="pillars__head wrap">
+        <p class="eyebrow mono" data-reveal>(02) — Principles</p>
+        <h2 class="h2" id="pillars-title" data-reveal-lines>Three things <span class="serif grad">every build gets.</span></h2>
+      </div>
+      <div class="pillars__viewport">
+        <div class="pillars__track" data-pillars-track>
+          <article class="pillar">
+            <span class="pillar__num">01</span>
+            <div class="pillar__body">
+              <h3 class="pillar__title">Craft</h3>
+              <p>Interfaces that feel obvious. Clean structure, considered typography and motion that guides rather than decorates.</p>
+            </div>
+            <div class="demo demo--ease" aria-hidden="true">
+              <svg viewBox="0 0 200 120"><path class="demo__curve" d="M10 110 C 60 110, 70 10, 190 10"/><path class="demo__axis" d="M10 10V110H190"/></svg>
+              <span class="demo__ball"></span>
+              <span class="demo__caption mono">cubic-bezier(.16, 1, .3, 1)</span>
+            </div>
+          </article>
+          <article class="pillar">
+            <span class="pillar__num">02</span>
+            <div class="pillar__body">
+              <h3 class="pillar__title">Speed</h3>
+              <p>Fast is a feature. Lean code, smart loading and performance budgets that survive real-world devices.</p>
+            </div>
+            <div class="demo demo--ring" aria-hidden="true">
+              <svg viewBox="0 0 120 120"><circle cx="60" cy="60" r="52" class="ring__bg"/><circle cx="60" cy="60" r="52" class="ring__fg" data-ring/></svg>
+              <span class="ring__num" data-ring-num>0</span>
+              <span class="demo__caption mono">Performance</span>
+            </div>
+          </article>
+          <article class="pillar">
+            <span class="pillar__num">03</span>
+            <div class="pillar__body">
+              <h3 class="pillar__title">Reach</h3>
+              <p>Built for everyone. Semantic, accessible, responsive, so the experience holds up for every user and every screen.</p>
+            </div>
+            <div class="demo demo--reflow" aria-hidden="true">
+              <div class="reflow" data-reflow>
+                <span></span><span></span><span></span><span></span>
+              </div>
+              <span class="demo__caption mono" data-reflow-label>1440px</span>
+            </div>
+          </article>
+        </div>
+      </div>
+    </section>
+
+    <!-- 05 FILM CONTINUES — scene 2 -->
+    <section class="film film--craft" data-film="0.34,0.67" aria-label="The craft">
+      <div class="film__sticky">
+        <canvas class="film__canvas" aria-hidden="true"></canvas>
+        <div class="film__vignette"></div>
+        <p class="sr-only">Background film: code lifts off the screen and assembles into layouts, typography and animated interface elements.</p>
+        <div class="craft__captions">
+          <p class="craft__cap" data-cap><span class="mono">01</span>Structure.</p>
+          <p class="craft__cap" data-cap><span class="mono">02</span><span class="serif grad">Typography.</span></p>
+          <p class="craft__cap" data-cap><span class="mono">03</span>Motion.</p>
+          <p class="craft__cap" data-cap><span class="mono">04</span><span class="serif grad">Every detail.</span></p>
+        </div>
+      </div>
+    </section>
+
+    <!-- 06 STORY -->
+    <section class="story" id="about" aria-labelledby="story-title">
+      <div class="story__grid wrap">
+        <figure class="story__media" data-clip>
+          <img src="assets/img/portrait.jpg" width="900" height="1200" alt="Portrait of Nabil Fannane at a desk with code on the monitors behind" loading="lazy" decoding="async" data-parallax>
+          <figcaption class="mono">Nabil Fannane · Front-end &amp; UI engineer</figcaption>
+        </figure>
+        <div class="story__copy">
+          <p class="eyebrow mono" data-reveal>(03) — Story</p>
+          <h2 class="h2" id="story-title" data-reveal-lines>From idea <span class="serif grad">to interface.</span></h2>
+          <div class="story__text">
+            <p data-reveal>I've always been drawn to the moment an idea becomes something you can actually use. That's the space I work in.</p>
+            <p data-reveal>I've built and shipped scalable, responsive React applications, integrated complex features into large existing codebases, and consistently delivered clean, high-quality user experiences. Along the way I've learned that the best interfaces aren't the loudest ones. They're the ones that feel effortless because someone sweated every detail.</p>
+            <p data-reveal>Today I partner with teams and founders who care about how their product <em>feels</em>: fast, accessible and polished on every screen.</p>
+          </div>
+          <blockquote class="story__quote serif" data-reveal>“The best interface is the one nobody has to think about.”</blockquote>
+        </div>
+      </div>
+    </section>
+
+    <!-- 07 SERVICES -->
+    <section class="services" id="services" aria-labelledby="services-title">
+      <div class="wrap">
+        <p class="eyebrow mono" data-reveal>(04) — Services</p>
+        <h2 class="h2" id="services-title" data-reveal-lines>How I can <span class="serif grad">help.</span></h2>
+        <ul class="services__list">
+          <li class="service" data-preview="assets/img/work/winerie.jpg" data-reveal>
+            <span class="service__num mono">01</span>
+            <h3 class="service__title">Web Experiences</h3>
+            <p class="service__desc">Marketing sites and landing pages with cinematic motion, built from scratch in clean HTML, CSS and JavaScript, or React.</p>
+            <span class="service__arrow" aria-hidden="true">↗</span>
+          </li>
+          <li class="service" data-preview="assets/img/work/bigeasy.jpg" data-reveal>
+            <span class="service__num mono">02</span>
+            <h3 class="service__title">Product UI Engineering</h3>
+            <p class="service__desc">Scalable React front-ends, component libraries and design systems that integrate cleanly into large codebases.</p>
+            <span class="service__arrow" aria-hidden="true">↗</span>
+          </li>
+          <li class="service" data-preview="assets/img/work/comptoir.jpg" data-reveal>
+            <span class="service__num mono">03</span>
+            <h3 class="service__title">Performance &amp; Accessibility</h3>
+            <p class="service__desc">Audits and fixes for Core Web Vitals and WCAG, turning slow or exclusionary interfaces into fast, inclusive ones.</p>
+            <span class="service__arrow" aria-hidden="true">↗</span>
+          </li>
+        </ul>
+      </div>
+      <div class="service-preview" aria-hidden="true"><img alt="" data-preview-img></div>
+    </section>
+
+    <!-- 08 WORK -->
+    <section class="work" id="work" aria-labelledby="work-title">
+      <div class="wrap">
+        <div class="work__head">
+          <p class="eyebrow mono" data-reveal>(05) — Selected work</p>
+          <h2 class="h2" id="work-title" data-reveal-lines>Selected <span class="serif grad">work.</span></h2>
+        </div>
+        <div class="work__grid">
+          <!-- To add or edit a project: duplicate an <a class="work-card">, then change href, image, title and tags. -->
+          <a class="work-card work-card--lg" href="https://mzabicoder.github.io/winerie/" target="_blank" rel="noopener" data-cursor="View">
+            <div class="work-card__media" data-clip><img src="assets/img/work/winerie.jpg" width="1440" height="900" alt="Winerie homepage: a woman walks between garden hedges carrying wine glasses and a bottle" loading="lazy" decoding="async"></div>
+            <div class="work-card__meta">
+              <span class="mono">01</span>
+              <h3>Winerie</h3>
+              <p class="mono">Web experience · Video</p>
+              <span class="work-card__arrow" aria-hidden="true">↗</span>
+            </div>
+            <p class="work-card__desc">Cinematic winery site with full-bleed video storytelling, a membership flow and a modernized design system.</p>
+          </a>
+          <a class="work-card work-card--sm" href="https://mzabicoder.github.io/mikisteakhouse_business/" target="_blank" rel="noopener" data-cursor="View">
+            <div class="work-card__media" data-clip><img src="assets/img/work/miki.jpg" width="1440" height="900" alt="Miki Steakhouse homepage: steaks searing over an open flame" loading="lazy" decoding="async" class="img-lift"></div>
+            <div class="work-card__meta">
+              <span class="mono">02</span>
+              <h3>Miki Steakhouse</h3>
+              <p class="mono">Business site · Hospitality</p>
+              <span class="work-card__arrow" aria-hidden="true">↗</span>
+            </div>
+            <p class="work-card__desc">Fire-lit steakhouse site with reservations, events, menu, wine list and gallery.</p>
+          </a>
+          <a class="work-card work-card--sm" href="https://mzabicoder.github.io/reactProjec/" target="_blank" rel="noopener" data-cursor="View">
+            <div class="work-card__media" data-clip><img src="assets/img/work/bigeasy.jpg" width="1440" height="900" alt="Big Easy homepage: “The Secret Behind A Fine Dining” headline beside a plated dish" loading="lazy" decoding="async"></div>
+            <div class="work-card__meta">
+              <span class="mono">03</span>
+              <h3>Big Easy</h3>
+              <p class="mono">React · Fine dining</p>
+              <span class="work-card__arrow" aria-hidden="true">↗</span>
+            </div>
+            <p class="work-card__desc">React single-page restaurant app with menu options, awards, sign-in and table booking.</p>
+          </a>
+          <a class="work-card work-card--lg" href="https://mzabicoder.github.io/ComptoirRestaurant/" target="_blank" rel="noopener" data-cursor="View">
+            <div class="work-card__media" data-clip><img src="assets/img/work/comptoir.jpg" width="1440" height="900" alt="Le Comptoir homepage: tea poured beside a plated course in a candlelit dining room" loading="lazy" decoding="async"></div>
+            <div class="work-card__meta">
+              <span class="mono">04</span>
+              <h3>Le Comptoir</h3>
+              <p class="mono">Restaurant · Responsive</p>
+              <span class="work-card__arrow" aria-hidden="true">↗</span>
+            </div>
+            <p class="work-card__desc">Moody, image-led restaurant site with reservations, menu, private dining and team pages.</p>
+          </a>
+          <!-- TODO: replace href, image and copy when the next project is live -->
+          <a class="work-card work-card--wide is-placeholder" href="#contact" data-todo="project-link" data-cursor="Soon">
+            <div class="work-card__media" data-clip><img src="assets/img/work/next.svg" width="1440" height="900" alt="" loading="lazy" decoding="async"></div>
+            <div class="work-card__meta">
+              <span class="mono">05</span>
+              <h3>Your next project</h3>
+              <p class="mono">Coming soon</p>
+              <span class="work-card__arrow" aria-hidden="true">→</span>
+            </div>
+            <p class="work-card__desc">This slot is open. It could be yours.</p>
+          </a>
+        </div>
+      </div>
+    </section>
+
+    <!-- 09 FINAL CTA — film scene 3 -->
+    <section class="film film--cta" id="contact" data-film="0.67,1" aria-labelledby="cta-title">
+      <div class="film__sticky">
+        <canvas class="film__canvas" aria-hidden="true"></canvas>
+        <div class="film__vignette"></div>
+        <p class="sr-only">Background film: the camera pulls back to reveal the finished website running on a desktop, a tablet and a phone.</p>
+        <div class="cta">
+          <p class="eyebrow mono" data-cta-fade>(06) — Contact</p>
+          <h2 class="cta__title" id="cta-title" aria-label="Let's build something effortless.">
+            <span class="line"><span class="line__inner" data-split="chars" data-cta-line>Let's build</span></span>
+            <span class="line"><span class="line__inner serif grad" data-split="chars" data-cta-line>something effortless.</span></span>
+          </h2>
+          <p class="cta__sub" data-cta-fade>Have an idea, a product or a site that needs to feel better? Let's talk.</p>
+          <div class="cta__actions" data-cta-fade>
+            <!-- TODO: replace the placeholder email address (3 places: here, the copy button, footer) -->
+            <a class="btn btn--primary btn--lg" href="mailto:you@example.com" data-todo="email" data-magnetic><span>Start a project</span><i aria-hidden="true">→</i></a>
+            <button class="cta__email" type="button" data-copy="you@example.com"><span data-copy-text>you@example.com</span><span class="mono cta__hint">Click to copy</span></button>
+          </div>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <!-- FOOTER -->
+  <footer class="footer">
+    <div class="wrap">
+      <div class="footer__cols">
+        <div>
+          <p class="mono footer__label">Navigation</p>
+          <a href="#work" class="link-draw">Work</a>
+          <a href="#about" class="link-draw">About</a>
+          <a href="#services" class="link-draw">Services</a>
+          <a href="#contact" class="link-draw">Contact</a>
+        </div>
+        <div>
+          <p class="mono footer__label">Social</p>
+          <a href="https://github.com/mzabicoder" target="_blank" rel="noopener" class="link-draw">GitHub</a>
+          <a href="#" data-todo="linkedin" class="link-draw">LinkedIn</a>
+        </div>
+        <div>
+          <p class="mono footer__label">Contact</p>
+          <a href="mailto:you@example.com" data-todo="email" class="link-draw">you@example.com</a>
+          <p class="footer__time mono"><span class="pulse"></span>Local time <span data-clock>--:--</span></p>
+        </div>
+      </div>
+      <div class="footer__mark" aria-hidden="true">
+        <span class="footer__mark-outline">Nabil Fannane</span>
+        <span class="footer__mark-fill" data-mark-fill>Nabil Fannane</span>
+      </div>
+      <div class="footer__base mono">
+        <span>© <span data-year>2026</span> Nabil Fannane. Hand-coded with HTML, CSS &amp; JS.</span>
+        <a href="#top" class="link-draw">Back to top ↑</a>
+      </div>
+    </div>
+  </footer>
+
+  <div class="toast mono" role="status" aria-live="polite" data-toast></div>
+</body>
+</html>

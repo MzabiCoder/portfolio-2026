@@ -1,0 +1,35 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1440 900">
+  <defs>
+    <radialGradient id="g" cx="70%" cy="30%" r="70%">
+      <stop offset="0" stop-color="#3B82F6" stop-opacity=".35"/>
+      <stop offset=".5" stop-color="#22D3EE" stop-opacity=".08"/>
+      <stop offset="1" stop-color="#0B0F14" stop-opacity="0"/>
+    </radialGradient>
+    <linearGradient id="l" x1="0" x2="1">
+      <stop offset="0" stop-color="#3B82F6"/><stop offset="1" stop-color="#22D3EE"/>
+    </linearGradient>
+    <pattern id="grid" width="60" height="60" patternUnits="userSpaceOnUse">
+      <path d="M60 0H0V60" fill="none" stroke="#F8FAFC" stroke-opacity=".06"/>
+    </pattern>
+  </defs>
+  <rect width="1440" height="900" fill="#0B0F14"/>
+  <rect width="1440" height="900" fill="url(#grid)"/>
+  <rect width="1440" height="900" fill="url(#g)"/>
+  <g fill="none" stroke="#F8FAFC" stroke-opacity=".18" stroke-width="2">
+    <rect x="240" y="170" width="960" height="560" rx="10"/>
+    <path d="M240 220H1200"/>
+  </g>
+  <g fill="#F8FAFC" fill-opacity=".18">
+    <circle cx="270" cy="195" r="7"/><circle cx="295" cy="195" r="7"/><circle cx="320" cy="195" r="7"/>
+  </g>
+  <rect x="300" y="290" width="420" height="44" rx="4" fill="url(#l)"/>
+  <rect x="300" y="360" width="560" height="18" rx="4" fill="#F8FAFC" fill-opacity=".14"/>
+  <rect x="300" y="394" width="480" height="18" rx="4" fill="#F8FAFC" fill-opacity=".1"/>
+  <rect x="300" y="450" width="150" height="44" rx="22" fill="none" stroke="#22D3EE" stroke-width="2"/>
+  <g fill="#F8FAFC" fill-opacity=".06" stroke="#F8FAFC" stroke-opacity=".12">
+    <rect x="300" y="540" width="270" height="150" rx="6"/>
+    <rect x="585" y="540" width="270" height="150" rx="6"/>
+    <rect x="870" y="540" width="270" height="150" rx="6"/>
+  </g>
+  <path d="M1000 300l40 40-40 40M920 300l-40 40 40 40M985 290l-50 100" fill="none" stroke="#22D3EE" stroke-width="6" stroke-linecap="round" stroke-linejoin="round"/>
+</svg>
