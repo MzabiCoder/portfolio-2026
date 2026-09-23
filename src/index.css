@@ -1,0 +1,106 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+/* ==========================================================================
+   Design tokens + the handful of globals that cannot live on a component
+   (document-level resets, runtime-generated split-text nodes, Lenis hooks).
+   Everything else is expressed with Tailwind utilities in the components.
+   ========================================================================== */
+@layer base {
+  :root {
+    --bg: #0B0F14;
+    --line: rgba(248, 250, 252, .08);
+    --line-2: rgba(248, 250, 252, .16);
+    --text: #F8FAFC;
+    --primary: #3B82F6;
+    --accent: #22D3EE;
+    --grad: linear-gradient(100deg, #3B82F6 0%, #22D3EE 100%);
+
+    --gutter: clamp(16px, 4vw, 48px);
+    --section: clamp(96px, 14vw, 220px);
+    --max: 1600px;
+    --nav-h: 76px;
+
+    --ease: cubic-bezier(.16, 1, .3, 1);
+    --ease-io: cubic-bezier(.76, 0, .24, 1);
+  }
+
+  html { -webkit-text-size-adjust: 100%; }
+  html.lenis, html.lenis body { height: auto; }
+  .lenis.lenis-smooth { scroll-behavior: auto !important; }
+  .lenis.lenis-stopped { overflow: hidden; }
+  .has-cursor, .has-cursor a, .has-cursor button { cursor: none; }
+
+  body {
+    @apply m-0 bg-bg text-text font-body text-body leading-[1.6] antialiased;
+    text-rendering: optimizeLegibility;
+    overflow-x: clip;
+  }
+
+  /* ambient light leaks */
+  body::before {
+    content: "";
+    @apply fixed -inset-[20%] -z-10 pointer-events-none animate-drift;
+    background:
+      radial-gradient(40% 35% at 80% 10%, rgba(59, 130, 246, .14), transparent 70%),
+      radial-gradient(35% 30% at 10% 90%, rgba(34, 211, 238, .08), transparent 70%);
+  }
+
+  img, svg, canvas { @apply block max-w-full; }
+  a { @apply text-inherit no-underline; }
+  button { @apply font-[inherit] text-inherit bg-none border-0 cursor-pointer p-0; }
+  p { @apply m-0; }
+  h1, h2, h3 { @apply m-0 font-[inherit]; }
+  ul { @apply list-none m-0 p-0; }
+  em { @apply not-italic; }
+  ::selection { @apply bg-primary text-text; }
+  :focus-visible { @apply outline outline-2 outline-accent outline-offset-4 rounded-sm; }
+
+  @media (prefers-reduced-motion: reduce) {
+    *, *::before, *::after {
+      animation-duration: .001ms !important;
+      animation-iteration-count: 1 !important;
+      transition-duration: .001ms !important;
+    }
+  }
+}
+
+@layer components {
+  /* ---- runtime split text (spans created by src/lib/splitText.js) ---- */
+  .line { @apply block overflow-hidden pb-[.2em] mb-[-.2em]; }
+  .line__inner { @apply inline-block; }
+  .char, .word { @apply inline-block will-change-transform; }
+  .word { @apply whitespace-nowrap; }
+  .word--c, .grad .word--c { background: none !important; color: inherit !important; }
+  .wmask { @apply inline-block overflow-hidden align-top px-[.04em] pb-[.12em] mx-[-.04em] mb-[-.12em]; }
+
+  /* ---- gradient text, kept continuous across split glyphs ---- */
+  .grad {
+    background: var(--grad);
+    -webkit-background-clip: text;
+    background-clip: text;
+    color: transparent;
+  }
+  .grad.is-split, .is-split .grad, .grad .is-split { background: none; color: var(--text); }
+  .grad.is-split .char, .is-split .grad .char, .grad .is-split .char,
+  .grad.is-split .word, .is-split .grad .word, .grad .is-split .word,
+  .grad-words em .word {
+    background: var(--grad);
+    background-size: var(--gw, 100%) 100%;
+    background-position: var(--gx, 0) 0;
+    -webkit-background-clip: text;
+    background-clip: text;
+    color: transparent;
+  }
+  .grad.is-split .char, .is-split .grad .char, .grad .is-split .char {
+    @apply px-[.12em] pb-[.22em] mx-[-.12em] mb-[-.22em];
+  }
+  .grad-words .word { @apply opacity-[.14]; }
+  @media (prefers-reduced-motion: reduce) {
+    .grad-words .word { opacity: 1; }
+  }
+
+  /* text-stroke has no utility equivalent */
+  .text-stroke { -webkit-text-stroke: 1px var(--line-2); color: transparent; }
+}
