@@ -1,10 +1,10 @@
 export const SITE = {
   name: 'Nabil Fannane',
-  role: 'Front-end & UI engineer',
+  role: 'Front-end & Agentic engineer',
   // TODO: replace the placeholder email address
-  email: 'you@example.com',
+  email: 'nfannane8287@gmail.com',
   github: 'https://github.com/mzabicoder',
-  linkedin: '#',
+  linkedin: 'https://www.linkedin.com/in/nabil-fannane-34828741/',
 };
 
 export const NAV_LINKS = [

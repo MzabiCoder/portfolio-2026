@@ -26,7 +26,7 @@ export default function StoryMedia({ imgRef }) {
         className="w-full h-[118%] object-cover [filter:grayscale(.35)_contrast(1.05)_brightness(.92)]"
       />
       <Mono as="figcaption" className="absolute left-5 bottom-[18px] z-[1] text-soft">
-        Nabil Fannane · Front-end &amp; UI engineer
+        Nabil Fannane · Front-end & Agentic engineer
       </Mono>
     </figure>
   );

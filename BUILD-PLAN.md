@@ -10,7 +10,7 @@
 
 ### 1. Website Overview
 
-A cinematic, single-page portfolio for **Nabil Fannane**, a front-end / UI engineer. The site is itself the proof: every scroll, transition and breakpoint shows the craft Nabil sells. Visitors should leave thinking *"if this is the portfolio, imagine the product."*
+A cinematic, single-page portfolio for **Nabil Fannane**, a front-end / Agentic engineer. The site is itself the proof: every scroll, transition and breakpoint shows the craft Nabil sells. Visitors should leave thinking *"if this is the portfolio, imagine the product."*
 
 The page is built around **one continuous AI-generated film**, scrubbed by the scroll: a developer at a workstation writes HTML and CSS → the code turns into layouts, type and motion → the camera pulls back to show the finished site running on desktop, tablet and phone. That arc (**Idea → Craft → Shipped**) is the story of the whole website.
 
@@ -28,7 +28,7 @@ The page is built around **one continuous AI-generated film**, scrubbed by the s
 
 **Headline system**
 - Hero: **"Ideas, engineered to feel effortless."**
-- Supporting: *Front-end & UI engineer building fast, accessible, responsive interfaces that people enjoy using, and that businesses can scale.*
+- Supporting: *Front-End & Agentic Engineer building fast, accessible, responsive interfaces that people enjoy using, and that businesses can scale.*
 
 **Positioning statement**
 For teams that need their product to *feel* as good as it works, Nabil Fannane is the front-end engineer who closes the gap between design and production: pixel-careful interfaces, performance budgets that hold, and accessibility built in from the start rather than patched on later.
@@ -163,7 +163,7 @@ ffmpeg -i film-raw.mp4 -vf "fps=6,scale=900:-2" -c:v libwebp -quality 65 assets/
 ### 8. Hero Section
 
 - **Layout:** full-viewport, pinned for ~250vh. Film (Scene 1) scrubs behind a dark gradient vignette.
-- **Eyebrow (mono):** `FRONT-END & UI ENGINEER — AVAILABLE FOR PROJECTS`
+- **Eyebrow (mono):** `FRONT-END & AGENTIC ENGINEER — AVAILABLE FOR PROJECTS`
 - **Headline (huge, kinetic, split by line → char):**
   **Ideas,**
   **engineered**
@@ -417,8 +417,8 @@ Portfolio/
 - Full keyboard support, visible focus, `prefers-reduced-motion` honored.
 
 **SEO / meta**
-- Title: `Nabil Fannane — Front-End & UI Engineer`
-- Description: *Front-end & UI engineer turning ideas into fast, accessible, responsive web experiences.*
+- Title: `Nabil Fannane — Front-End & Agentic Engineer`
+- Description: *Nabil Fannane — Front-End & Agentic Engineer turning ideas into fast, accessible, responsive web experiences.*
 - Open Graph image: `assets/img/og.jpg` (1200×630, poster-3 + wordmark).
 - JSON-LD `Person` schema.
 
